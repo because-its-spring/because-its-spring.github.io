@@ -13,50 +13,15 @@
 	<!--
 	<link rel="stylesheet" type="text/css" href="styles.css">
 	-->
-<script language="JavaScript" type="text/javascript">
-     var arr_department = [
-                     ["人工智能","软件工程","计算机科学与技术"],
-                     ["电子信息工程","光电信息工程","电子科学与技术","真空电子技术","信息对抗技术","探测制导与控制技术"],
-                     ["机械工程及自动化", "测控技术与仪器","武器系统与工程","车辆工程","工业工程","飞行器设计与工程"],
-                     ["精细化工","应用化学","化学工程","化学","非金属材料科学与工程","安全工程"],
-                     ["自动化","电气工程","信息工程","交通工程"],
-                 ];
-     function changeSelect(){
-         //获得院下拉框的对象
-         var sltcollege=document.form1.college;
-         //获得系下拉框的对象
-         var sltdepartment=document.form1.department;
-         //得到对应院的系数组
-         var collegeDepartment=arr_department[sltcollege.selectedIndex - 1];
-         //清空系下拉框，仅留提示选项
-         sltdepartment.length=1;
-         //将系数组中的值填充到系下拉框中
-         for(var i=0;i<collegeDepartment.length;i++){
-             sltdepartment[i+1]=new Option(collegeDepartment[i],collegeDepartment[i]);
-         }
-    }
-</script>
   </head>
   
   <body>
+ <img src="/images/logo.png" width="258" height="39" />
  <form name="form1" id="form1" action="logincontroller" method="post">
     用户：<input type="text" name="uname" required="required"><br>
     密码：<input type="password" name="upassword" required="required"><br>
-    验证码：<input type="text" name="security_code" required="required">8774<br>
-    所在学院：<select name="college" id="college" onchange="changeSelect()">
-    <option value="0">请选择学院 </option>
-    <option value="计算机科学与工程学院">计算机科学与工程学院 </option>
-    <option value="电子工程与光电技术学院">电子工程与光电技术学院 </option>
-    <option value="机械工程学院">机械工程学院</option>
-    <option value="化工学院">化工学院</option>  
-    <option value="自动化学院">自动化学院</option>
-</select><br>
-    所在系：<select name="department" id="department">
-     <option value="0">请选择系</option>
-     </select><br>
+	 
     <input type="submit" value="登录">
-    <input type="button" value="帮助">
-    <input type="button" value="忘密">
     </form>
   </body>
 
